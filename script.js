@@ -31,7 +31,7 @@ boxes.forEach((box) => {
       box.innerText = "O";
       turnO = false;
     } else {
-      box.innerText = "X";
+      box.innerText = "S";
       turnO = true;
     }
     box.disabled = true;
@@ -47,6 +47,7 @@ boxes.forEach((box) => {
 
 const gameDraw = () => {
   msg.innerText = "Game was a Draw";
+  msg.style.color="red";
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
@@ -66,6 +67,7 @@ const enableBoxes = () => {
 
 const showWinner = (winner) => {
   msg.innerText = `Congratulations winner is, ${winner}`;
+  msg.style.color="blue";
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
